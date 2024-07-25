@@ -197,11 +197,11 @@ function startDailyWeeklySummaryUpdate() {
     },delay+20000);
 }
 
-startHourlyWeatherUpdates();
-startHourlyCleanup();
-startHourlySummaryCalculation();
-startDailyWeeklySummaryUpdate();
 app.get('/',async(req,res)=>{
+    startHourlyWeatherUpdates();
+    startHourlyCleanup();
+    startHourlySummaryCalculation();
+    startDailyWeeklySummaryUpdate();
     res.json("Connection Successful");
 })
 
